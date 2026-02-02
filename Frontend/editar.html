@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Anuncio - Ventas Anónimas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-4">
+        <div class="card shadow-sm p-4">
+            <h2 class="mb-4">Editar Anuncio</h2>
+            
+            <form id="formEditar">
+                <input type="hidden" id="anuncio_id">
+                
+                <div class="alert alert-info border-info mb-4">
+                    <label class="form-label fw-bold">Introduce tu Token de Seguridad para guardar cambios:</label>
+                    <input type="text" id="token_usuario" class="form-control" placeholder="Tu código secreto" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Título</label>
+                    <input type="text" id="titulo" class="form-control" required>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label class="form-label fw-bold">Categoría</label>
+                        <select id="categoria" class="form-select">
+                            <option value="Tecnología">Tecnología</option>
+                            <option value="Hogar">Hogar</option>
+                            <option value="Moda">Moda</option>
+                            <option value="Salud">Salud</option>
+                            <option value="Hobby">Hobby</option>
+                            <option value="Otros">Otros</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label fw-bold">Precio ($)</label>
+                        <input type="number" step="0.01" id="precio" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label fw-bold">Estado</label>
+                        <select id="estado" class="form-select">
+                            <option value="Nuevo">Nuevo</option>
+                            <option value="Usado">Usado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Descripción</label>
+                    <textarea id="descripcion" class="form-control" rows="4" required></textarea>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">País</label>
+                        <select id="pais" class="form-select">
+                            <option value="México">México</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Ecuador">Ecuador</option>
+                            </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Contacto</label>
+                        <input type="text" id="contacto" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label fw-bold">Enlace de la Foto (URL)</label>
+                    <input type="url" id="imagen_url" class="form-control">
+                </div>
+
+                <button type="submit" class="btn btn-warning w-100 fw-bold py-2 shadow-sm">Guardar Cambios</button>
+                <div class="text-center mt-3">
+                    <a href="carteles.html" class="text-muted text-decoration-none small">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/editar.js"></script>
+</body>
+</html>
